@@ -1,7 +1,7 @@
 import ThreadCard from "@/components/cards/ThreadCard";
 import Pagination from "@/components/shared/Pagination";
 import { fetchPosts } from "@/lib/actions/thread.actions";
-import { fetchUser } from "@/lib/actions/user.actions";
+// import { fetchUser } from "@/lib/actions/user.actions";
 import { UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
@@ -13,13 +13,13 @@ export default async function Home({
   searchParams: { [key: string]: string | undefined };
 }) {
   const user = await currentUser();
-     if (!user) return null;
+  //    if (!user) return null;
 
-    // fetch organization list created by user
-    const userInfo = await fetchUser(user.id);
-    if (!userInfo?.onboarded) redirect("/onboarding"); 
+  //   // fetch organization list created by user
+  //   const userInfo = await fetchUser(user.id);
+  //   if (!userInfo?.onboarded) redirect("/onboarding"); 
 
-  const result = await fetchPosts(1,0)
+  const result = await fetchPosts(1,30)
 
 
   return (

@@ -9,6 +9,7 @@ import User from "../models/user.model";
 
 import { connectToDB } from "../mongoose";
 
+
 export async function fetchUser(userId: string) {
   try {
     connectToDB();

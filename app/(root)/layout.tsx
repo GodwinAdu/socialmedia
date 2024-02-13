@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Thread',
-  description: 'Created by Jutech Devx',
+  description: 'Created by Jutech Dev',
 }
 
 export default function RootLayout({

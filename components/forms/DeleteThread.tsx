@@ -7,7 +7,7 @@ import { deleteThread } from "@/lib/actions/thread.actions";
 
 interface Props {
   threadId: string;
-  currentUserId: string;
+  currentUserId: string | undefined;
   authorId: string;
   parentId: string | null;
   isComment?: boolean;
